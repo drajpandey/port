@@ -1,0 +1,700 @@
+/*===== GOOGLE FONTS =====*/
+ @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+ :root{
+    --header-height: 3rem;
+    --font-medium: 500;
+}
+
+/*===== Colores =====*/
+:root{
+    --first-color: #5361FF;
+    --white-color: #FAFAFF;
+    --dark-color: #2A3B47;
+    --text-color: #697477;
+}
+
+/*===== Fuente y tipografia =====*/
+:root{
+    --body-font: 'Montserrat', sans-serif;
+    --big-font-size: 6.25rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+}
+
+
+/*===== Margenes =====*/
+:root{
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+}
+
+/*===== z index =====*/
+:root{
+    --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*,::before,::after{
+    box-sizing: border-box;
+}
+/* html{
+    scroll-behavior: smooth;
+} */
+
+body{
+  background-color: #FCF8E8;
+}
+*{
+  box-sizing: border-box;
+}
+.box-blue{
+    margin: var(--header-height) var(--header-height) var(--header-height) var(--header-height);
+    font-family: var(--body-font);
+    font-size: var(--h2-font-size);
+    font-weight: bolder;
+    color: white;
+    line-height: 1.6;
+}
+ .menu ul li a,h2,h3,h4,p {
+   font-family: '"Roboto', sans-serif;
+   font-size: 20px;
+
+   font-style: normal;
+   font-weight: 500;
+   letter-spacing: -0.25px;
+   text-transform: none;
+
+}
+h1{color: #2d2d2d;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 39px;
+    line-height: 44px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.25px;
+    text-transform: none;
+
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: small;
+}
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+  height: 50px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding-right: 20px;
+ background-color: #3AB0FF;;
+ color: #fff;
+ z-index: 10;
+ overflow: visible;
+}
+.nav-links a {
+ color: #fff;
+ font-size: 20px;
+ color: black;
+ /* font-style: normal; */
+
+
+}
+/* LOGO */
+.logo {
+
+ text-align: center;
+ display: inline-block;
+
+
+
+}
+.logo img{
+ position: absolute;
+  height: 100px;
+  width: 200px;
+  top:60px;
+  left: 15px;
+
+  border-radius: 10%;
+
+
+}
+.logo h2{
+  margin: 15px;
+}
+/* NAVBAR MENU */
+.menu {
+  /* margin-left: 150%; */
+ display: flex;
+ gap: 1em;
+ font-size: 18px;
+}
+.menu li:hover {
+ background-color: #4c9e9e;
+ border-radius: 5px;
+ transition: 0.3s ease;
+}
+.menu li {
+ padding: 5px 14px;
+}
+/* DROPDOWN MENU */
+.services {
+ position: relative;
+}
+.dropdown {
+ background-color: rgb(1, 139, 139);
+ padding: 1em 0;
+ position: absolute; /*WITH RESPECT TO PARENT*/
+ display: none;
+ border-radius: 8px;
+ top: 35px;
+}
+.dropdown li + li {
+ margin-top: 10px;
+}
+.dropdown li {
+ padding: 0.5em 1em;
+ width: 8em;
+ text-align: center;
+}
+.dropdown li:hover {
+ background-color: #4c9e9e;
+}
+.services:hover .dropdown {
+ display: block;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+ display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+ display: none;
+ font-size: 24px;
+ user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+.menu {
+ display:none;
+ position: absolute;
+ background-color:teal;
+ right: 0;
+ left: 0;
+ text-align: center;
+ padding: 16px 0;
+}
+.menu li:hover {
+ display: inline-block;
+ background-color:#4c9e9e;
+ transition: 0.3s ease;
+}
+.menu li + li {
+ margin-top: 12px;
+}
+input[type=checkbox]:checked ~ .menu{
+ display: block;
+}
+.hamburger {
+ display: block;
+}
+.dropdown {
+ left: 50%;
+ top: 30px;
+ transform: translateX(35%);
+}
+.dropdown li:hover {
+ background-color: #4c9e9e;
+}
+}
+
+/* top image text */
+
+.container {
+
+  width: 100%;
+
+  position: flex;
+  text-align: center;
+  color: #e4defd;
+  font-family: 'Bree Serif', serif;
+  font-weight: bolder;
+  font-size: 25px;
+
+
+}/* Centered text */
+
+.centered {
+
+  color: black;
+  font-family:sans-serif;
+  font-size: 39px;
+  position:absolute;
+  top: 650px;
+  left: 400px;
+  width:700px;
+
+}
+
+.box-blue{
+
+   border: 1px solid green ;
+   float:centered;
+    max-width:80%;
+    margin: auto;
+  /* max-width:  calc(700px - 30px); */
+   min-height: calc(500px - 30px);
+   box-sizing:border-box;
+   border-radius: 10px;
+   position: relative;
+   /* margin-left: 250px; */
+   text-align: center;
+   text-shadow: 2px;
+   font-size: 14px;
+   background-color: #06283D;
+
+
+
+
+}
+.footer{
+
+    background-color: var(--dark-color);
+
+
+}
+.footer__container{
+    row-gap: 2rem;
+}
+.footer__title{
+    font-size: var(--normal-font-size);
+    color: black;
+    margin-bottom: var(--mb-2);
+}
+.footer__link{
+    padding: .25rem 0;
+}
+.footer__link:hover{
+    color: var(--first-color);
+}
+.footer__social{
+    font-size: 1.4rem;
+    margin-right: var(--mb-1);
+}
+.footer__social:hover{
+    color: var(--first-color);
+}
+
+.union,.union-1,.union2,.union-12{
+  float: left;
+  width: 50%;
+  padding: 15px;
+  margin-top: 7px;
+
+  text-align: left;
+  align-items: center;
+
+}
+
+col-1,col-2{
+  float: left;
+  width: 50%;
+  /* padding: 15px;
+  margin-top: 7px; */
+
+  text-align: left;
+
+}
+.world .col-1 img{
+ /* position: absolute;
+ right: 100px;
+ bottom: 100px; */
+ /* top:1500px; */
+   /* width: 40%; */
+  min-height: 250px;
+ /* padding: 0 20px; */
+ display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+
+
+
+
+
+}
+
+
+.union-main,.union-main2{
+   max-width:100%;
+   max-height: auto;
+  margin-top: 50px;
+   box-sizing: border-box;
+   display: flex;
+
+
+
+}
+
+
+ .union-main .union-1 img{
+  /* position: absolute;
+  right: 100px;
+  bottom: 100px; */
+  /* top:1500px; */
+    width: 50%;
+   min-height: 250px;
+  padding: 0 20px;
+  display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+.union-main2 .union-12 img{
+ /* position: absolute;
+ right: 100px;
+ bottom: 100px; */
+ /* top:1500px; */
+ width: 50%;
+min-height: 250px;
+padding: 0 20px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+
+}
+/* .box-bs{
+  width: 75px;
+  height: 60px;
+  background-color: red;
+  text-align: center;
+  position: absolute;
+  right: 100px;
+  bottom: 0px;
+  top:1500px; */
+
+}
+.box-bs h1{
+  color: white;
+  font-family:serif;
+  text-align: center;
+  padding: -30px;
+}
+
+
+.world{
+  width:100%;
+  height: 400px;
+
+}
+.worldimg{
+  position: absolute;
+  left: 100px;
+  bottom: 100px;
+  top:1900px;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+}
+.col-2{
+  position: absolute;
+  right: 10px;
+  right: :50px;
+  line-height: normal;
+  margin: 0;
+  width: 50%;
+}
+.new-world{
+  width: 100%;
+  height:1000px;
+}
+
+.end{
+  width:100%;
+  height: 250px;
+}
+
+
+/* foot */
+.end{
+  width: 100%;
+  height:300px;
+  background-color: #30475E;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  font-family: "Roboto" ,Sans-serif;
+}
+.pahla{
+  width: 45%;
+  height:250px;
+  border-width: medium;
+  border-color: #CDDEFF;
+  border-style: solid;
+  background-color: none;
+  position: absolute;
+  left: 30px;
+  top:20px;
+  border-radius: 20px;
+  text-align: justify;
+  text-shadow: 10px;
+  font-size: 30px;
+line-height: 1.25em;
+padding-top: 20px;
+color:#DA1212;
+
+}
+.pahla h2{
+  font-family: "roboto", Sans-serif;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #b11016;
+  font-size: 30px;
+line-height: 1.25em;
+}
+.dusra h2{
+   font-weight: bold;
+   padding-top: 10px;
+   padding-left: 10px;
+   padding-right: 10px;
+   font-size: 30px;
+ line-height: 1.25em;
+}
+.dusra{
+
+  width: 45%;
+  height:250px;
+  border-width: medium;
+  background-color: none;
+  border-style: solid;
+    border-color: #CDDEFF;
+  position: absolute;
+  right: 30px;
+ top:20px;
+  border-radius: 20px;
+  font-size: 30px;
+line-height: 1.25em;
+padding-top: 20px;
+color:white;
+}
+
+/* technology */
+.technology {
+   width:100%;
+  height:350px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+
+
+
+}
+.data img{
+  width:25%;
+  height:250px;
+  position: absolute;
+
+
+}
+.geno img{
+  width:25%;
+  height:250px;
+  position: absolute;
+  left:75%;
+
+}
+.cloud img{
+  width:25%;
+  height:250px;
+  position: absolute;
+  left:25%;
+
+}
+.blockchain img{
+  width:25%;
+  height:250px;
+  position: absolute;
+  left:50%;
+
+}
+.data .data1{
+  width:25%;
+  height:120px;
+  position: absolute;
+  background-color: #2D4059;
+    bottom: 0;
+
+
+}
+.geno .geno1{
+  width:25%;
+  height:150px;
+  height:120px;
+  position: absolute;
+  left:75%;
+
+    bottom: 0;
+    background-color: #DA1212;
+
+}
+.cloud .cloud1{
+  width:25%;
+  height:150px;
+  height:120px;
+  position: absolute;
+  left:25%;
+  background-color: #DA1212;
+    bottom: 0;
+
+}
+.blockchain .blockchain1{
+  width:25%;
+  height:150px;
+  height:120px;
+  position: absolute;
+  bottom: 0;
+  left:50%;
+  background-color: #2D4059;
+
+}
+
+.cloud1 h1{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.data1 h1{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.blockchain1 h1{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.geno1 h1{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.textwala h1{
+  text-align: center;
+}
+.textwala h3{
+  text-align: center;
+  color: #c0c0c0;
+}
+
+.volunteer{
+  margin-top: 110px;
+}
+
+.iconwala{
+  width:100%;
+  height:350px;
+  position: relative;
+  display: flex;
+  margin-top: 40px;
+  margin-left: 50px;
+  padding-left: 20px;
+
+
+}
+.js img{
+
+  position: absolute;
+  height: auto;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+
+}
+.python img{
+  position: absolute;
+  height: auto;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  position: absolute;
+  left:75%;
+
+}
+.mongodb img{
+  position: absolute;
+  height: auto;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  position: absolute;
+  left:25%;
+
+}
+.figma img{
+  position: absolute;
+  height: auto;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  position: absolute;
+  left:50%;
+}
+.copyright{
+  width: 100%;
+  height:20px;
+  background-color: white;
+  text-align: right;
+}
+
+@media screen and (max-width: 500px) {
+
+
+.logo img {
+  width:90px;
+  height: 65px;
+}
+.centered {
+
+    font-size: 10px;
+    position: absolute;
+      top: 180px;
+     left: 0;
+      width: 180px;
+}
+.box-blue{max-width: calc(700px - 30px);}
+
+
+}
+ .union{
+  width: 100%;
+}
+
+}
+}
+.div{
+  display: inline-block;
+
+}
